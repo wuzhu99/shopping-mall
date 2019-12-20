@@ -1,0 +1,15 @@
+<!--pages/myAddress/myAddress.wxml-->
+<view>
+  <view>商家位置：</view>
+  <view class='title'>
+  <text>成都市武侯区力保大厦</text>
+  </view>
+</view>
+<map id="map" 
+  longitude="104.076320" 
+  latitude="30.623350" 
+  scale="14"
+   markers="{{markers}}" 
+   bindmarkertap="markertap" 
+   show-location style="width: 100%; height: 300px;">
+   </map>

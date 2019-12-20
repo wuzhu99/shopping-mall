@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/Home/Home",
+    "pages/Mall/Mall",
+    "pages/Cart/Cart",
+    "pages/Mine/Mine",
+    "pages/Search/Search",
+    "pages/Products/Products",
+    "pages/Detail/Detail",
+    "pages/Collection/Collection",
+    "pages/myAddress/myAddress"
+  ],
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "#222222",
+    "list": [
+      {
+        "pagePath": "pages/Home/Home",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/homes.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/Mall/Mall",
+        "iconPath": "assets/icons/list.png",
+        "selectedIconPath": "assets/icons/lists.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/Cart/Cart",
+        "iconPath": "assets/icons/cart.png",
+        "selectedIconPath": "assets/icons/carts.png",
+        "text": "购物袋"
+      },
+      {
+        "pagePath": "pages/Mine/Mine",
+        "iconPath": "assets/icons/mine.png",
+        "selectedIconPath": "assets/icons/mines.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#222222",
+    "navigationBarTitleText": "Z-只为你的时尚穿衣风格",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"
+  },
+  "sitemapLocation": "sitemap.json"
+}

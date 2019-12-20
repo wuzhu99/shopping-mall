@@ -1,0 +1,107 @@
+<view wx:if='{{cartList.length !== 0}}' class='header-nav-buy-bag'>
+  <view class='to-edit' bindtap='TabStatus'>
+    <text wx:if="{{isEdit===true}}">编辑</text><text wx:else>完成</text>
+  </view>
+</view>
+<view wx:else class='empty-cart'>
+  <image src='../../assets/icons/empty.png'></image>
+  什么都没有呀
+</view>
+<view class='content'>
+  <view
+    class='orderListChild'
+    wx:for='{{cartList}}'
+    wx:key='item'
+    data-id='{{item.id}}'
+    bindtouchstart='onItemTouchStart'
+    bindtouchend='onItemTouchEnd'
+    bindtouchmove='onItemTouchMove'
+    style='left: {{currentId === item.id ? left : 0}}rpx;'
+  >
+    <view
+    class='orderListChild-infoBox'
+    wx:key='item'
+    >
+      <label class="checkbox" >
+        <checkbox
+          bindtap='tabChecked'
+          data-id='{{item.id}}'
+          checked='{{item.isChecked}}'
+          class="ws-checkbox"
+        />
+      </label>
+      <image
+        src='{{item.image}}'
+        class='myOrder-goodImg'
+        bindtap='toDetail'
+        data-detail='{{item}}'
+      ></image>
+      <view class='myOrder-goodInfo'>
+        <view
+          class='myOrder-goodName'
+          bindtap='toDetail'
+          data-detail='{{item}}'
+        >{{item.title}}</view>
+        <view class='myOrder-goodPrice-goodCount'>
+          <text class='goodPrice'>￥{{item.price}}</text>
+          <view>
+            <text wx:if="{{isEdit===true}}">x{{item.count}}</text>
+            <view wx:else class='pedding-buy-count'>
+              <text data-item='{{item}}' bindtap='reduceCount'>-</text>
+              <text class='count-input'>{{item.count}}</text>
+              <text data-item='{{item}}' bindtap='addCount'>+</text>
+            </view>
+          </view>
+      </view>
+      </view>
+    </view>
+    <view
+      data-item='{{item}}'
+      bindtap='deleteItem'
+      class='delete-item'
+    >删除</view>
+  </view>
+</view>
+
+<view class='title'>猜你喜欢</view>
+<view class='list-content'>
+  <view
+  class='weui-item'
+  wx:for="{{list}}"
+  wx:key="{{item.id}}"
+  bindtap='toDetail'
+  data-detail='{{item}}'
+  >
+    <image src='{{item.image}}'></image>
+    <text class='item-title'>{{item.title}}</text>
+    <view class='item-info'>
+      <text class='price'>￥{{item.price}}</text>
+      <image class='item-icon' src='../../assets/icons/lueluelue.png'></image>
+    </view>
+  </view>
+</view>
+<image bindtap='goTop' wx:if='{{floorstatus === true}}' class='gotop' src='../../assets/icons/top.png'></image>
+
+<view
+wx:if='{{cartList.length !== 0}}'
+class='goodsSelectedContainer'
+>
+  <view class='leftCount'>
+    <label class="checkbox" >
+      <checkbox
+        bindtap='tabAllChecked'
+        class="ws-checkbox"
+        checked="{{AllChecked}}"
+      />
+    </label>
+    <text style='totle'> 全选</text>
+  </view>
+  <view class='rightPrice' wx:if="{{isEdit===true}}">
+    <text style='color:#b81919'> ￥{{totalPrice}} </text>
+    <text class='buy'>结算</text>
+  </view>
+  <view class='rightPrice' wx:else>
+    <text style='color:#b81919'> ￥{{totalPrice}} </text>
+    <text bindtap='deleteChecked' class='delete'>删除</text>
+  </view>
+</view>

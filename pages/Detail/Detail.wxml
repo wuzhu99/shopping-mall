@@ -1,0 +1,53 @@
+<!--pages/Detail/Detail.wxml-->
+<swiper class='banners' autoplay="true" indicator-dots="true" circular="true" interval="3000">
+  <block
+  wx:for="{{detailSwiper}}"
+  wx:key="{{item.id}}"
+  >
+    <swiper-item class="banner-item">
+      <image src="{{item.url}}" class="slide-image" width="750rpx" height="276rpx"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='title'>
+  <image src='../../assets/icons/by.png'></image>
+  <text>{{detailData.title}}</text>
+</view>
+<view class='detail-text'>
+  <view
+    wx:for='{{accessoryHints}}'
+    wx:key='{{index}}'
+  >
+  <image src='../../assets/icons/youhui.png'></image>
+  {{item}}
+  </view>
+</view>
+<view class='info'>
+  <text class='price'>${{detailData.price}}</text>
+  <text class='saleNum'>月销量：{{detailData.saleNum}}</text>
+</view>
+<view class='prodetail'>
+  品牌图文详情
+</view>
+<view class='content'>
+  <image
+    wx:for='{{descContentList}}'
+    wx:key='{{item.image.id}}'
+    src='{{item.image.url}}'
+    style='height:{{item.image.height}}rpx;'
+  ></image>
+</view>
+<view class='bottom'>
+  <image src='../../assets/icons/kefu.png'></image>
+  <image
+    wx:if='{{detailData.isSc === false}}'
+    bindtap='handlIsSc'
+    src='../../assets/icons/sc1.png'
+  ></image>
+  <image bindtap='handlIsSc' wx:else src='../../assets/icons/sc2.png'></image>
+  <view class='goshop'>立即购买</view>
+  <view
+    class='toCart'
+    bindtap='goCart'
+  >加入购物车</view>
+</view>

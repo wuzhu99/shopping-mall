@@ -1,0 +1,54 @@
+<!--pages/Collection/Collection.wxml-->
+<view class='header'>
+  <view 
+    wx:for="{{tab}}"
+    wx:key="{{index}}"
+    class="{{active === item ? 'header-active' : ''}}"
+  >
+    <text
+      bindtap='handlsort'
+      data-active="{{item}}"
+    >{{item}}</text>
+    <image
+      wx:if="{{active !== item}}"
+      src='../../assets/icons/2bottom.png'
+    ></image>
+    <image wx:else src='../../assets/icons/1bottom.png'></image>
+  </view>
+</view>
+<view class='content'>
+  <view
+    class='weui-item'
+    wx:for="{{ScList}}"
+    wx:key="{{item.id}}"
+  >
+    <image
+      src='{{item.image}}'
+      bindtap='toDetail'
+      data-detail='{{item}}'
+    ></image>
+    <text class='item-title'>{{item.title}}</text>
+    <view class='item-info'>
+      <text class='price'>￥{{item.price}}</text>
+      <image
+        data-detail='{{item}}'
+        bindtap='ShowDel'
+        class='item-icon'
+        src='../../assets/icons/lueluelue.png'
+      ></image>
+    </view>
+    <image
+      wx:if='{{currentId === item.id}}'
+      data-detail='{{item}}'
+      bindlongtap="delScItem"
+      class='delSc'
+      src='../../assets/icons/delSc.png'
+    ></image>
+  </view>
+</view>
+<image
+  bindtap='goTop'
+  wx:if='{{floorstatus === true}}'
+  class='gotop'
+  src='../../assets/icons/top.png'
+></image>

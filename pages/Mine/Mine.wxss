@@ -1,0 +1,57 @@
+/* pages/Mine/Mine.wxss */
+.headerwrap{
+  width: 100%;
+  height: 350rpx;
+  color: #dedede;
+  font-size: 28rpx;
+  background: #222;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header{
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  color: #dedede;
+}
+.login{
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  background: #b81919;
+}
+.userImg{
+  display: block;
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+.content{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.info{
+  width: 250rpx;
+  height: 210rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1rpx solid #dedede;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  letter-spacing: 5rpx;
+}
+.info image{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 15rpx 0;
+  vertical-align: middle;
+}

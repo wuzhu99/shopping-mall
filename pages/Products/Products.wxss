@@ -1,0 +1,66 @@
+/* pages/Products/Products.wxss */
+.header{
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1px solid #f3f3f3;
+  display: flex;
+  justify-content: space-around;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+.header image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.header-active{
+  color: #222;
+  font-size: 30rpx;
+}
+.content{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.weui-item{
+  margin-left:17rpx;
+  margin-bottom: 15rpx;
+  width:350rpx;
+  height:480rpx;
+  font-size: 26rpx;
+}
+.weui-item .item-title{
+  display: block;
+  width: 350rpx;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.weui-item image{
+  width:350rpx;
+  height:355rpx;
+}
+.weui-item .item-info{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 900;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  padding-right:10rpx;
+}
+.weui-item .item-info .item-icon{
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+}
+.gotop{
+  background: #fff;
+  width:80rpx;
+  height: 80rpx;
+  position: fixed;
+  right: 50rpx;
+  bottom: 80rpx;
+  z-index: 999;
+}

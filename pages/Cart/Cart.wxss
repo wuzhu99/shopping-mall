@@ -1,0 +1,228 @@
+/* pages/Cart/Cart.wxss */
+page{
+  background: #F0F0F0;
+}
+.header-nav-buy-bag{
+  background: #ffffff;
+  margin-bottom: 10rpx;
+  width: 100%;
+  height: 60rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+.left-nav-icon image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.to-edit{
+  color:#222;
+  font-weight: 900;
+  text-align: right;
+  padding: 0 20rpx;
+}
+.wx-checkbox-input{
+	display: none;
+}
+.ws-checkbox {
+  vertical-align: middle;
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  background-image: url('https://xjl.jindanke.cn/uploads/wx_img/checked-box.png');
+  background-size: 100%;
+}
+.ws-checkbox[checked] {
+  background-image: url('https://xjl.jindanke.cn/uploads/wx_img/checked-box-hover.png');
+}
+.myOrder-goodImg{
+  width: 160rpx;
+  height: 160rpx;
+}
+.myOrder-goodInfo{
+  width: 420rpx;
+  height: 134rpx;
+}
+.myOrder-goodName{
+  font-size: 24rpx;
+}
+.myOrder-goodPrice-goodCount{
+  width: 420rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-around;
+  margin-top: 15rpx;
+}
+.goodPrice{
+  color:#b81919;
+  font-size: 30rpx;
+  padding-right: 50rpx;
+}
+.pedding-buy-count{
+  font-size: 26rpx;
+  line-height: 50rpx;
+  width: 220rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  border: 1px solid #222;
+  border-width: 1rpx 0;
+}
+.pedding-buy-count text{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+}
+.goodsSelectedContainer{
+  width: 100%;
+  height: 98rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  line-height: 98rpx;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+.leftCount{
+  float: left;
+  font-size: 28rpx;
+  margin-left: 15rpx;
+}
+.totle{
+  padding: 10rpx;
+}
+.leftCount image{
+  width: 38rpx;
+  height: 40rpx;
+}
+.rightPrice{
+  height: 100%;
+}
+.buy{
+  display: inline-block;
+  width: 228rpx;
+  height: 100%;
+  background: #222222;
+  color: #dedede;
+  font-size: 28rpx;
+  text-align: center;
+}
+page{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  width: 100%;
+  box-sizing: border-box;
+}
+.orderListChild{
+  width: 950rpx;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.orderListChild-infoBox{
+  width: 750rpx;
+  height: 160rpx;
+  margin:10rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+}
+.delete{
+  display: inline-block;
+  width: 228rpx;
+  height: 100%;
+  font-size: 28rpx;
+  color: #ffffff;
+  background: #b81919;
+  text-align: center;
+}
+.delete-item{
+  height: 100%;
+  width: 200rpx;
+  background: #222;
+  color: #dedede;
+  line-height: 160rpx;
+  text-align: center;
+  font-size: 26rpx;
+  margin:10rpx 0;
+}
+
+.title{
+  padding-top: 38rpx;
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: 900;
+  color: #222;
+  line-height: 40px;
+}
+.list-content{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding-bottom: 98rpx;
+}
+.weui-item{
+  margin-left:17rpx;
+  margin-bottom: 15rpx;
+  width:350rpx;
+  height:480rpx;
+  font-size: 26rpx;
+  background: #fff;
+}
+.weui-item .item-title{
+  display: block;
+  width: 350rpx;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.weui-item image{
+  width:350rpx;
+  height:355rpx;
+}
+.weui-item .item-info{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 900;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  padding-right:10rpx;
+}
+.weui-item .item-info .item-icon{
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+}
+.gotop{
+  background: #fff;
+  width:80rpx;
+  height: 80rpx;
+  position: fixed;
+  right: 50rpx;
+  bottom: 160rpx;
+  z-index: 999;
+}
+.empty-cart{
+  width: 100%;
+  height: 750rpx;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  color: #999999;
+  line-height: 48rpx;
+}
+.empty-cart image {
+  width: 100rpx;
+  height: 100rpx;
+}

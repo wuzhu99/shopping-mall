@@ -1,0 +1,112 @@
+/* pages/Detail/Detail.wxss */
+.banners{
+  width: 750rpx;
+  height: 750rpx;
+}
+.banners .banner-item{
+  width: 750rpx;
+  height: 750rpx;
+}
+.banners .slide-image{
+  width: 750rpx;
+  height: 750rpx;
+}
+.banner{
+  overflow: hidden;
+  background: #ffffff;
+}
+.banner image{
+  width:48%;
+  margin-right: 5rpx; 
+}
+.title {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  padding: 5rpx 10rpx;
+  box-sizing: border-box;
+  color: #222;
+}
+.title image{
+  width: 70rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.detail-text{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  line-height: 80rpx;
+  justify-content: space-around;
+  font-size: 26rpx;
+  background: #fdfdfd;
+}
+.detail-text image{
+  width:30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.info{
+  width: 100%;
+  margin: 25rpx 0;
+  padding: 5rpx 10rpx;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.price{
+  color: #222;
+  font-size: 40rpx;
+  font-weight: 900;
+  line-height: 40rpx;
+}
+.saleNum{
+  font-size: 26rpx;
+  line-height: 40rpx;
+  color: #b1a9a5;
+}
+.content{
+  width: 100%;
+}
+.content image{
+  width: 100%;
+}
+.prodetail{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #222;
+  font-size: 30rpx;
+  border: 1rpx solid #f3f3f3;
+  border-width: 1rpx 0;
+}
+.bottom{
+  width: 100%;
+  height: 110rpx;
+  background: #dedede;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 110rpx;
+  font-size: 30rpx;
+}
+.goshop{
+  width:250rpx;
+  height: 100%;
+  background: #999;
+}
+.bottom .toCart{
+  width:300rpx;
+  height: 100%;
+  background: #222;
+  color: #f6f6f6;
+}
+.bottom image{
+  width:70rpx;
+  height: 60rpx;
+  margin:20rpx 15rpx;
+}

@@ -1,0 +1,88 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wx69dfdbcdc039d59a",
+	"projectname": "mini",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "mall",
+					"pathName": "pages/Mall/Mall",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "products",
+					"pathName": "pages/Products/Products",
+					"query": "id=1702"
+				},
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/Detail/Detail",
+					"query": "id=3864934"
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/Cart/Cart",
+					"query": "id=3864934"
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/Mine/Mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sc",
+					"pathName": "pages/Collection/Collection",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myAddress",
+					"pathName": "pages/myAddress/myAddress"
+				}
+			]
+		}
+	}
+}

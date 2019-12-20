@@ -1,0 +1,87 @@
+<!--pages/Home/Home.wxml-->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="搜索" bindfocus="toSearch" />
+    </view>
+  </view>
+</view>
+<swiper class='banners' autoplay="true" indicator-dots="true" circular="true" interval="3000">
+  <block
+    wx:for="{{banners}}"
+    wx:key="{{item.id}}"
+  >
+    <swiper-item class="banner-item">
+      <image src="{{item.imageUrl}}" class="slide-image" width="750rpx" height="276rpx"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='content'>
+  <text class='title'>每日精选</text>
+  <swiper class='info' circular="true">
+    <block
+      wx:for="{{Jinx}}"
+      wx:key="{{item.id}}"
+    >
+      <swiper-item
+        data-detail='{{item}}'
+        bindtap='toDetail'
+        class='info-item'
+      >
+        <image src='{{item.image}}'></image>
+        <text>{{item.title}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="page__bd">
+  <view class="weui-tab">
+      <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+              <view id="{{index}}" class="weui-navbar-item" bindtap="tabClick">
+                  <view class="weui-navbar__title">{{item}}</view>
+              </view>
+          </block>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <!-- 热卖 -->
+        <view class="weui-tab__content hot"  hidden="{{activeIndex != 0}}">
+          <view
+            class='weui-item'
+            wx:for="{{hots}}"
+            wx:key="{{item.id}}"
+            data-detail='{{item}}'
+            bindtap='toDetail'
+          >
+            <image src='{{item.image}}'></image>
+            <text class='item-title'>{{item.title}}</text>
+            <view class='item-info'>
+              <text class='price'>￥{{item.price}}</text>
+              <image class='item-icon' src='../../assets/icons/lueluelue.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 新品 -->
+        <view class="weui-tab__content new" hidden="{{activeIndex != 1}}">
+          <view
+            class='weui-item'
+            wx:for="{{news}}"
+            wx:key="{{item.id}}"
+            data-detail='{{item}}'
+            bindtap='toDetail'
+          >
+            <image src='{{item.image}}'></image>
+            <text class='item-title'>{{item.title}}</text>
+            <view class='item-info'>
+              <text class='price'>￥{{item.price}}</text>
+              <image class='item-icon' src='../../assets/icons/lueluelue.png'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>
+<image bindtap='goTop' wx:if='{{floorstatus === true}}' class='gotop' src='../../assets/icons/top.png'></image>
